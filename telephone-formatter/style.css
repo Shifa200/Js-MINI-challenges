@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+body { 
+    background-color: #f4f6f8;
+    display: flex;
+    
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.container {
+    background: #fff;
+    padding: 20px 25px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.phone-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.phone-input:focus {
+    border-color: #3b82f6
+}
+
+
+.phone-input.error-border {
+    border-color: red;
+}
+
+.phone-input.success-border {
+    border-color: green;
+}
+
+.hint {
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+}
+
+.error {
+    font-size: 13px;
+    color: red;
+    margin-top: 6px;
+}
