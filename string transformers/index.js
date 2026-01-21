@@ -18,7 +18,14 @@ input.addEventListener('input', () => {
   document.getElementById('trim').innerText  = toTrim(text);
 
 });
+function getWords(str) {
+    return str
+    .trim()
+    .toLowerCase()
+    .split(" ")
+    .filter(word => word !== "");
 
+}
 
 function toLower(str) {
     return str.toLowerCase();
@@ -29,9 +36,9 @@ function toUpper(str) {
 }
 
 function toCamel(str) {
-    return str
-    .toLowerCase()
-    .split(' ')
+const words = getWords(str)
+
+    return words
     .map((word, index) => 
         index === 0
         ? word
@@ -41,8 +48,7 @@ function toCamel(str) {
 }
 
 function toPascal(str) {
-    return str.toLowerCase()
-    .split(' ')
+    return getWords(str)
     .map(word => 
         word.charAt(0).toUpperCase() + word.slice(1)
     )
@@ -50,13 +56,13 @@ function toPascal(str) {
 }
 
 function toSnake(str) {
-    return str.toLowerCase().split(" ").join("_")
+    return getWords(str).join("_")
 }
 
 function toKebab(str) {
-    return str.toLowerCase().split(" ").join("-")
+    return getWords(str).join("-")
 }
 
 function toTrim(str) {
-    return str.trim().split(" ").join('')
+    return getWords(str).join('')
 }
