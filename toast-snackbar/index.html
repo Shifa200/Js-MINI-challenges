@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast / Snackbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <select id="horizontal">
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+        </select>
+        <select id="vertical">
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+        </select>
+        <select id="type">
+            <option value="success">Success</option>
+            <option value="error">Error</option>
+            <option value="warning">Warning</option>
+            <option value="info">Info</option>
+        </select>
+
+        <input type="text" id="message" value="This is a toast message!">
+
+        <div class="duration">
+        <p>Duration</p>
+
+        <input type="range" id="duration" min="1" max="10" value="5" />
+        <span id="time">5s</span>
+
+        </div> 
+
+        
+        <button class= "button" id="showToast">Show Toast</button>
+        
+    </div>
+
+    <!--Toast Container-->
+
+    <div id="toast-container"></div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
